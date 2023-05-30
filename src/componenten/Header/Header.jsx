@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
 
-            <h2 className="title">🗨 Teile deine Meinung zu diesem Artikel!</h2>
+            <h2 className="title"> <span><FaComment/></span>Teile deine Meinung zu diesem Artikel!</h2>
         </div>
     );
 };

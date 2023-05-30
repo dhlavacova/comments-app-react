@@ -1,24 +1,28 @@
 import React from 'react';
+import './ComentarItem.scss'
 
 const ComentarItem = ({data, setData}) => {
 
-    const deleteCommentar = (id)=>{
-        const deletedCommentar = data.filter((comment)=>comment.id !== id)
+    const deleteCommentar = (id) => {
+        const deletedCommentar = data.filter((comment) => comment.id !== id)
         setData(deletedCommentar);
     }
     return (
-        <div>
-            <h2>{data.length}</h2>
-        <ul>
+        <div className="comentarContainer">
+            <h2>{data.length} Kommentar</h2>
 
-        {data.map((el, index)=>
-        <li key={index}>
-            <p>{el.comentar}</p>
-            <div>name:{el.name}</div>
-            <button onClick={()=>deleteCommentar(el.id)}>Delete</button>
-        </li>
-        )}
-        </ul>
+            <ul>
+                {data.map((el, index) =>
+                    <li
+                        key={index}>
+                        <div className="name">{el.name}</div>
+                        <div>{el.time}</div>
+                        <p className="paragraf">{el.comentar}</p>
+                        <a onClick={() => deleteCommentar(el.id)}>Delete</a>
+
+                    </li>
+                )}
+            </ul>
         </div>
     );
 };

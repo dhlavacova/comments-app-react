@@ -1,6 +1,45 @@
-.formularContainer{
-  border:1px solid #255625;
-  background-color: #255625;
-  color: #255625;
+@import '../_mixin.scss';
+@import '../variable.scss';
+
+.formularContainer {
+  height: 18rem;
+  width: 100%;
+
+  .bodyForm {
+    @include displeyFlex;
+    width: 40rem;
+    justify-content: center;
+
+    padding: 15px;
+
+    .sendComent {
+
+      background-color: $inputSend;
+      color: $inputColor;
+      border: none;
+      width: 15rem;
+      height: 2.1rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 15px;
+      padding-top:5px;
+      padding-left: 10px;
+    }
+
+    .label {
+      color: $labelColor;
+    }
+
+    .input{
+      height:35px;
+      border:none;
+
+    }
+    .textarea{
+      border:none;
+    }
+
+  }
 
 }

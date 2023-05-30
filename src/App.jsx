@@ -1,8 +1,9 @@
 import React, {useState,useEffect} from "react";
-import './App.css'
+import './App.scss'
 import Form from "./componenten/Form/Form.jsx";
 import ComponentListe from "./componenten/ComentarListe/ComponentListe.jsx";
 import ComentarItem from "./componenten/ComentarItem/ComentarItem.jsx";
+import Header from "./componenten/Header/Header.jsx";
 function App() {
 
 const [data,setData] = useState(() => {
@@ -21,7 +22,8 @@ const [data,setData] = useState(() => {
 
 
   return (
-    <div className="App">
+    <div className="App mainBody">
+        <Header/>
         <ComponentListe >
             <ComentarItem data={data} setData={setData}   />
             </ComponentListe>
